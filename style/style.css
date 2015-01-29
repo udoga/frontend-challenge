@@ -71,7 +71,6 @@ nav a {
     display: inline-block;
     padding: 8px 14px 9px 14px;
     border-left: 1px solid #d9d9d9;
-    font-size: initial;
     text-decoration: none;
     color: black;
 }
@@ -88,4 +87,93 @@ nav a .line1 {
 nav a .line2 {
     font-family: Arial Black, Arial Bold, sans-serif;
     font-size: 20px;
+}
+
+.container {
+    width: 1000px;
+    margin: auto;
+}
+
+section .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#about-this-book .left {
+    width: 340px;
+    float: left;
+}
+
+#about-this-book .title {
+    width: 120px;
+    margin: 5px auto 30px auto;
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial Black;
+}
+
+#about-this-book .title .font-signpainter {
+    font-size: 36px;
+    line-height: 32px;
+}
+
+#about-this-book .content {
+    width: 660px;
+    margin-left: 340px;
+}
+
+.book-picture {
+    width: 298px;
+    height: 375px;
+    background: url(../images/bookback.jpg);
+    perspective: 220px;
+    perspective-origin: 50% 40%;
+    margin-top: 8px;
+    margin-left: 40px;
+}
+
+.book-picture img {
+    width: 179px;
+    height: 313px;
+    margin-top: 16px;
+    transform: rotateY(-14deg);
+}
+
+a.button {
+    padding: 10px 17px 9px 17px;
+    background: linear-gradient(#6db9bf 45%, #58afb6 55%, #4aa8b0);
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+#about-this-book .left a {
+    margin-top: 10px;
+    margin-left: 60px;
+    display: inline-block;
+}
+
+#about-this-book p {
+    color: #666666;
+    line-height: 18px;
+}
+
+.price-box {
+    width: 300;
+    height: 215;
+    background: gray;
+    float: right;
+    margin: 0px 0px 30px 30px;
+}
+
+#about-this-book .book-info {
+    margin-top: 26px;
+    font-size: 10px;
+    line-height: 17px;
+    color: #999999;
+}
+
+#about-this-book .book-info b {
+    color: black;
 }
