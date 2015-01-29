@@ -206,3 +206,37 @@ a.button.all-quotes {
     color: #48a7af;
     border: 1px solid #d9d9d9;
 }
+
+#footer-menu {
+    height: 222px;
+    background: black;
+}
+
+footer {
+    height: 44px;
+    line-height: 44px;
+    background: #262626;
+    color: white;
+    font-size: 10px;
+}
+
+footer .links {
+    margin-left: 480px;
+}
+
+footer a {
+    margin-right: 25px;
+}
+
+footer a {
+    color: #48a7af;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .right {
+    float: right;
+}
