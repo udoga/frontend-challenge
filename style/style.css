@@ -99,22 +99,22 @@ section .container {
     padding-bottom: 40px;
 }
 
-#about-this-book .left {
-    width: 340px;
-    float: left;
-}
-
-#about-this-book .title {
-    width: 120px;
+section .title {
+    width: 140px;
     margin: 5px auto 30px auto;
     text-align: center;
     font-size: 30px;
     font-family: Arial Black;
 }
 
-#about-this-book .title .font-signpainter {
+section .title .font-signpainter {
     font-size: 36px;
     line-height: 32px;
+}
+
+#about-this-book .left {
+    width: 340px;
+    float: left;
 }
 
 #about-this-book .content {
@@ -140,18 +140,18 @@ section .container {
 }
 
 a.button {
-    padding: 10px 17px 9px 17px;
+    padding: 11px 17px 10px 17px;
     background: linear-gradient(#6db9bf 45%, #58afb6 55%, #4aa8b0);
     color: white;
     font-size: 12px;
     text-decoration: none;
     border-radius: 7px;
+    display: inline-block;
 }
 
-#about-this-book .left a {
+a.button.review {
     margin-top: 10px;
     margin-left: 60px;
-    display: inline-block;
 }
 
 #about-this-book p {
@@ -160,8 +160,8 @@ a.button {
 }
 
 .price-box {
-    width: 300;
-    height: 215;
+    width: 300px;
+    height: 215px;
     background: gray;
     float: right;
     margin: 0px 0px 30px 30px;
@@ -176,4 +176,33 @@ a.button {
 
 #about-this-book .book-info b {
     color: black;
+}
+
+#favorite-quotes {
+    background: #262626;
+    color: white;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+a.button.quote {
+    margin-top: 14px;
+    margin-bottom: 84px;
+}
+
+#favorite-quotes .quotes {
+    width: 960px;
+    height: 48px;
+    background: url(../images/quotes.png);
+    margin: auto auto 92px auto;
+    font-family: "Free Serif", serif;
+    font-size: 32px;
+    font-style: italic;
+}
+
+a.button.all-quotes {
+    background: linear-gradient(#ffffff 45%, #fefefe 55%, #f3f3f3);
+    color: #48a7af;
+    border: 1px solid #d9d9d9;
 }
