@@ -19,11 +19,11 @@
 		</div>
 	</header>
 	<nav>
-		<a href="#">
+		<a href="#about-this-book">
 			<span class="line1">About this</span><br/>
 			<span class="line2">BOOK</span>
 		</a>
-		<a href="#" class="last">
+		<a href="#favorite-quotes" class="last">
 			<span class="line1">Favorite</span><br/>
 			<span class="line2">QUTOES</span>
 		</a>
@@ -91,5 +91,14 @@
 			<span class="right">In partnership with</span>
 		</div>
 	</footer>
+	<script src='javascript/jquery-1.11.2.js'></script>
+	<script src="javascript/jq-sticky-anything.min.js"></script>
+	<script src="javascript/jquery.smooth-scroll.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('nav').stickThis();
+			$('nav a').smoothScroll({offset: -59});
+		});
+	</script>
 </body>
 </html>
