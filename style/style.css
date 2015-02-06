@@ -286,8 +286,37 @@ a.button.all-quotes:after {
 }
 
 #footer-menu {
-    height: 222px;
     background: black;
+    color: white;
+    font-size: 12px;
+    overflow: auto;
+    line-height: 22px;
+}
+
+#footer-menu .left {
+    width: 450px;
+    border-right: 1px solid #262626;
+    margin-right: 30px;
+    float: left;
+}
+
+#footer-menu .column {
+    margin-top: 40px;
+    float: left;
+    height: 177px;
+    width: 100px;
+}
+
+#footer-menu .column.wide {
+    width: 255px;
+}
+
+#footer-menu .column.first {
+    width: 160px;
+}
+
+#footer-menu .column.last {
+    white-space: nowrap;
 }
 
 footer {
@@ -306,12 +335,12 @@ footer a {
     margin-right: 25px;
 }
 
-footer a {
+footer a, #footer-menu a {
     color: #48a7af;
     text-decoration: none;
 }
 
-footer a:hover {
+footer a:hover, #footer-menu a:hover {
     text-decoration: underline;
 }
 
