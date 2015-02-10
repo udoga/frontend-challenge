@@ -17,6 +17,7 @@ h2 {
     font-size: 72px;
     font-weight: bold;
     line-height: 90px;
+    text-transform: uppercase;
 }
 
 h3 {

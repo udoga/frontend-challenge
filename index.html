@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="bookStore" ng-controller="BookController as book">
 <head>
 	<meta charset="utf-8"/>
-	<title>Gold by Chris Cleave</title>
+	<title>{{book.bookData.title + " by " + book.bookData.author}}</title>
 	<link rel="stylesheet" href="style/style.css"/>
 	<link rel="stylesheet" href="style/fonts.css"/>
 </head>
 <body>
 	<header>
-		<h2>GOLD</h2>
-		<h3>By <span class="author">Chris Cleave</span></h3>
-		<h4>Published Jun 2012 , 368 pages</h4>
+		<h2>{{book.bookData.title}}</h2>
+		<h3>By <span class="author">{{book.bookData.author}}</span></h3>
+		<h4>Published {{book.publicationDate | date:'MMM yyyy'}} , {{book.bookData.pages}} pages</h4>
 		<div class="book-options">
 			<a href="#">ADD TO MY QUEUE</a>
 			<a href="#">I'VE READ IT</a>
@@ -32,7 +32,7 @@
 		<div class="container">
 			<div class="left">
 				<div class="book-picture">
-					<img src="images/cover.jpg" alt="Book Cover"/>
+					<img ng-src="{{book.bookData.image_url}}" alt="Book Cover"/>
 				</div>
 				<a href="#" class="button icon review">ADD A REVIEW</a>
 			</div>
@@ -42,14 +42,14 @@
 			<div class="content">
 				<div class="purchase-box">
 					<div class="part">
-						<span class="price">Price: $12.99</span>
+						<span class="price">Price: {{book.bookData.products[0].price | currency}}</span>
 						<a href="#" class="button icon buy">BUY eBOOK</a>
 					</div>
 					<div class="part gray">
-						<span class="price">Price: $30.13</span>
+						<span class="price">Price: {{book.optionPrice | currency}}</span>
 						<a href="#" class="button">ADD TO CART</a>
-						<select>
-							<option value="">CD-AUDIO, 2012, $30.13</option>
+						<select ng-model="book.optionPrice"
+							ng-options="option.price as book.formatProductLabel(option) for option in book.productOptions">
 						</select>
 					</div>
 					<div class="part">
@@ -58,12 +58,12 @@
 						</select>
 					</div>
 				</div>
-				<p>The spectacular new novel by the bestselling and critically acclaimed author of the reader and bookseller favourite, Little Bee. In the tradition of his beloved previous novel, Little Bee, Chris Cleave again gives us an elegant, funny, passionate story about friendship, marriage, parenthood, tragedy, and redemption. This time, the setting is the upcoming London Olympics. Gold is the story of two women, Zoe and Kate, world-class cyclists who have been friends and rivals since their first day of elite training years ago. They have loved, fought, betrayed, forgiven, lost, consoled, triumphed, and grown up together. Now, on the eve of London 2012, their last Olympics, the two must compete for the one remaining spot on their team. In doing so, the women will be tested to their physical, mental and emotional limits. They will confront each other and their own mortality, and be asked to decide: What will you sacrifice for the people you love?</p>
+				<p>{{book.bookData.description}}</p>
 				<div class="book-info">
-					<b>ISBN:</b> 9780385677165<br/>
-					<b>FORMAT:</b> ebook<br/>
-					<b>PAGES:</b> 368<br/>
-					<b>PUBLICATION DATE:</b> 06/05/2012<br/>
+					<b>ISBN:</b> {{book.bookData.isbn}}<br/>
+					<b>FORMAT:</b> {{book.bookData.format}}<br/>
+					<b>PAGES:</b> {{book.bookData.pages}}<br/>
+					<b>PUBLICATION DATE:</b> {{book.bookData.publication_date}}<br/>
 				</div>
 			</div>
 		</div>
@@ -75,7 +75,7 @@
 			</div>
 			<a href="#" class="button icon add-quote">ADD A QUOTE</a>
 			<div class="quotes">
-				<span>Add a favorite queue from this book.</span>
+				<span>{{book.bookData.quotes[0].quote}}</span>
 			</div>
 			<a href="#" class="button all-quotes">VIEW ALL QUOTES</a>
 		</div>
@@ -152,6 +152,8 @@
 			<span class="right">In partnership with</span>
 		</div>
 	</footer>
+	<script src="javascript/angular.min.js"/></script>
+	<script src="javascript/app.js"></script>
 	<script src='javascript/jquery-1.11.2.js'></script>
 	<script src="javascript/jq-sticky-anything.min.js"></script>
 	<script src="javascript/jquery.smooth-scroll.js"></script>
