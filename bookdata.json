@@ -8,9 +8,9 @@
     "pages": "368",
     "publication_date": "06/05/2012",
     "quotes": [
-        {"quote" : "A true artist is not one who is inspired, but one who inspires others."},
-        {"quote" : "You tell me, and I forget. You teach me, and I remember. You involve me, and I learn."},
-        {"quote" : "A great thought begins by seeing something differently, with a shift of the mind's eye."}
+        "A true artist is not one who is inspired, but one who inspires others.",
+        "You tell me, and I forget. You teach me, and I remember. You involve me, and I learn.",
+        "A great thought begins by seeing something differently, with a shift of the mind's eye."
     ],
     "products": [
         {"type" : "eBook", "price" : "12.99"},
